@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("Images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Moves "Quadra Burgers" to the top-left */
+.welcome {
+  color: #00ff99; /* Electric Blue */
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  animation: neonGlow 2s infinite alternate;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Glowing Text Animation */
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 5px #00bfff, 0 0 15px #00bfff, 0 0 30px #00bfff;
+    transform: scale(1);
+  }
+  25% {
+    text-shadow: 0 0 10px #ff5733, 0 0 20px #ff5733, 0 0 40px #ff5733;
+    transform: scale(1.2);
+  }
+  50% {
+    text-shadow: 0 0 15px #ff4500, 0 0 25px #ff4500, 0 0 60px #ff4500;
+    transform: scale(1.3);
+  }
+  75% {
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 40px #00bfff;
+    transform: scale(1.2);
+  }
+  100% {
+    text-shadow: 0 0 5px #ff5733, 0 0 15px #ff5733, 0 0 30px #ff5733;
+    transform: scale(1);
+  }
+}
+
+/* Centers button at the bottom */
+.button-container {
+  display: flex;
+  justify-content: center;  /* Center the button horizontally */
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;  /* Moves button to the bottom */
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+.button {
+  color: white;
+  padding: 30px 50px;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-top: 580px;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: #ff3d00;
+  box-shadow: 0 8px 16px rgba(255, 87, 51, 0.5);
+}
